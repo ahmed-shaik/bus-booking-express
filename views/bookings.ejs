@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>All Bookings</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1>All Bookings</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Date</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Type</th>
+        <th>Tickets</th>
+      </tr>
+      <% bookings.forEach(booking => { %>
+      <tr>
+        <td><%= booking.passenger_name %></td>
+        <td><%= booking.journey_date.toISOString().split("T")[0] %></td>
+        <td><%= booking.from_city %></td>
+        <td><%= booking.to_city %></td>
+        <td><%= booking.bus_type %></td>
+        <td><%= booking.tickets %></td>
+      </tr>
+      <% }) %>
+    </table>
+    <a href="/">Back to Booking Form</a>
+  </body>
+</html>

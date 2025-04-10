@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CityLink Travels</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1>CityLink Travels</h1>
+    <form action="/book" method="POST">
+      <label>Passenger Name:</label>
+      <input type="text" name="passenger_name" required /><br />
+
+      <label>Date of Journey:</label>
+      <input type="date" name="journey_date" required /><br />
+
+      <label>From:</label>
+      <select name="from_city">
+        <option>Delhi</option>
+        <option>Mumbai</option>
+        <option>Chennai</option></select
+      ><br />
+
+      <label>To:</label>
+      <select name="to_city">
+        <option>Bangalore</option>
+        <option>Kolkata</option>
+        <option>Hyderabad</option></select
+      ><br />
+
+      <label>Bus Type:</label>
+      <select name="bus_type">
+        <option>AC</option>
+        <option>Non-AC</option>
+        <option>Sleeper</option></select
+      ><br />
+
+      <label>Number of Tickets:</label>
+      <input type="number" name="tickets" required /><br />
+
+      <button type="submit">Book Now</button>
+    </form>
+
+    <h2>Sample Timetable</h2>
+    <table>
+      <tr>
+        <th>Route</th>
+        <th>Departure Time</th>
+        <th>Arrival Time</th>
+        <th>Fare</th>
+      </tr>
+      <tr>
+        <td>Delhi to Bangalore</td>
+        <td>8:00 AM</td>
+        <td>8:00 PM</td>
+        <td>₹1200</td>
+      </tr>
+      <tr>
+        <td>Mumbai to Kolkata</td>
+        <td>7:00 AM</td>
+        <td>9:00 PM</td>
+        <td>₹1500</td>
+      </tr>
+      <tr>
+        <td>Chennai to Hyderabad</td>
+        <td>6:00 AM</td>
+        <td>2:00 PM</td>
+        <td>₹800</td>
+      </tr>
+    </table>
+    <a href="/bookings">View All Bookings</a>
+  </body>
+</html>
